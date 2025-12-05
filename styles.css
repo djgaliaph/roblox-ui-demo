@@ -1,0 +1,230 @@
+:root {
+    --roblox-blue: #00A2FF;
+    --dark-background: #191919;
+    --card-background: #232323;
+    --text-color: #FFFFFF;
+    --error-red: #FF4444;
+    --input-background: #393939;
+    --border-color: #333333;
+}
+
+/* Base Styles & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Using Poppins for a modern look */
+    background-color: var(--dark-background);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--roblox-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--card-background);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.roblox-logo {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.navbar-center input {
+    background-color: var(--input-background);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--text-color);
+    width: 300px;
+}
+
+.navbar-center input::placeholder {
+    color: #999;
+}
+
+.signup-btn, .login-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-btn {
+    background-color: var(--roblox-blue);
+    color: var(--text-color);
+}
+
+.login-btn {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+/* --- Login Container/Box Styling --- */
+.login-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.login-box {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.login-box h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background-color: var(--input-background);
+    border: 1px solid var(--input-background);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.input-field:focus {
+    outline: 2px solid var(--roblox-blue);
+    border-color: var(--roblox-blue);
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 5px; /* Alignment with inputs */
+}
+
+.log-in-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--roblox-blue);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 20px;
+}
+
+.log-in-btn:hover {
+    background-color: #008DCC;
+}
+
+.forgot-section a {
+    color: #CCCCCC; /* Lighter grey for this link */
+    font-size: 14px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Separator for "login with" */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.separator hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.login-with-text {
+    padding: 0 15px;
+    font-size: 12px;
+    color: #888888;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.login-with-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--input-background); /* Darker button for secondary option */
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 30px;
+}
+
+.login-with-btn:hover {
+    background-color: #444444;
+}
+
+.signup-link p {
+    font-size: 14px;
+}
+
+/* --- Footer Styling --- */
+.footer {
+    padding: 20px;
+    background-color: var(--dark-background);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer a {
+    color: #CCCCCC;
+}
+
+.copyright {
+    width: 100%;
+    margin-top: 15px;
+    color: #888888;
+}

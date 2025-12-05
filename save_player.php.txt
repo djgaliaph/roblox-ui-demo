@@ -1,0 +1,21 @@
+<?php
+header("Content-Type: application/json");
+require "db.php";
+
+$username = $_POST["username"] ?? "";
+$avatar = $_POST["avatar"] ?? "";
+
+if ($username == "") {
+    echo json_encode(["status" => "error", "message" => "Username required"]);
+    exit;
+}
+
+$stmt = $conn->prepare("INSERT INTO players (username, avatar_url) VALUES (?, ?)");
+$stmt->bind_param("ss", $username, $avatar);
+
+if ($stmt->execute()) {
+    echo json_encode(["status" => "success", "message" => "Player saved"]);
+} else {
+    echo json_encode(["status" => "error", "message" => "Failed to save"]);
+}
+?>

